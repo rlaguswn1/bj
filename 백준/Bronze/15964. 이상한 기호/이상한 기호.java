@@ -1,14 +1,16 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
+import java.math.*;
 
-// The main method must be in a class named "Main".
 class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int a = s.nextInt();
-        int b = s.nextInt();
+        BigDecimal a = new BigDecimal(s.next());
+        BigDecimal b = new BigDecimal(s.next());
 
-        System.out.print((a+b)*(a-b));
+        BigDecimal sumab = a.add(b);
+        BigDecimal subab = a.subtract(b);
+        System.out.print(sumab.multiply(subab));
     }
 }
